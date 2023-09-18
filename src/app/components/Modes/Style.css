@@ -1,0 +1,285 @@
+ .toggle-checkbox {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+     height: 0;
+     width: 0;
+ }
+
+ .toggle-slot {
+     position: relative;
+     height: 32px;
+     width: 74px;
+     border: 2px solid #e4e7ec;
+     border-radius: 10em;
+     background-color: white;
+     box-shadow: 0px 10px 25px #e4e7ec47;
+     transition: background-color 250ms;
+ }
+
+ .toggle-checkbox:checked~.toggle-slot {
+     background-color: var(--color-bg);
+ }
+
+ .toggle-checkbox:checked~.toggle-slot .toggle-button {
+     background-color: #485367;
+     box-shadow: inset 0px 0px 0px 0.75em white;
+     transform: translate(12px, 6.5px);
+ }
+
+
+ .toggle-button {
+     transform: translate(46px, 6.5px);
+     position: absolute;
+     height: 16px;
+     width: 16px;
+     border-radius: 50%;
+     background-color: #ffeccf;
+     transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+     box-shadow: inset 0px 0px 0px 0.75em #ffbb52;
+ }
+
+
+ .sun-icon {
+     position: absolute;
+     height: 6em;
+     width: 6em;
+     color: #ffbb52;
+ }
+
+ .sun-icon-wrapper {
+     position: absolute;
+     height: 6em;
+     width: 6em;
+     opacity: 1;
+     transform: translate(2em, 2em) rotate(15deg);
+     transform-origin: 50% 50%;
+     transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+ }
+
+ .toggle-checkbox:checked~.toggle-slot .sun-icon-wrapper {
+     opacity: 0;
+     transform: translate(3em, 2em) rotate(0deg);
+ }
+
+ .moon-icon {
+     position: absolute;
+     height: 6em;
+     width: 6em;
+     color: white;
+ }
+
+ .moon-icon-wrapper {
+     position: absolute;
+     height: 6em;
+     width: 6em;
+     opacity: 0;
+     transform: translate(11em, 2em) rotate(0deg);
+     transform-origin: 50% 50%;
+     transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2.5, .46, .71);
+ }
+
+ .toggle-checkbox:checked~.toggle-slot .moon-icon-wrapper {
+     opacity: 1;
+     transform: translate(12em, 2em) rotate(-15deg);
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* html * {
+     transition: all 750ms !important;
+     transition-delay: 0 !important;
+ } */
+
+ html {
+     --color-html: white;
+     --border-inner: #e4e4e4;
+     --border-mid: #e8e8e8;
+     --border-outer: #eeeeee;
+     --bottom-line: #e4e4e4;
+     --top-line: #e4e4e4;
+     --speaker: #efefef;
+     --camera: #efefef;
+     --shadow: #8a8a8a;
+     --text: #1f1f1f;
+ }
+
+
+
+ html .iphone .moon {
+     width: 160px;
+     height: 160px;
+     border-radius: 50%;
+     position: absolute;
+     left: 50%;
+     top: 20%;
+     transform: translate(-50%, -20%) rotate(-45deg);
+     transition: all 1s ease-out;
+     z-index: 2;
+ }
+
+ html .iphone .moon svg path {
+     transition: all 0.5s ease-out;
+ }
+
+
+ html .iphone .trigger {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     cursor: pointer;
+     background-image: url(https://jssecrets.com/wp-content/uploads/2023/01/moon.svg);
+     background-size: 28px;
+     background-position: center center;
+     background-repeat: no-repeat;
+     position: fixed;
+     left: 42px;
+     top: 58px;
+     transform: translate(-50%, -80%);
+     z-index: 1;
+     transform-style: preserve-3d;
+     transition: all 0.5s ease-out;
+ }
+
+ html .iphone .trigger::after {
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     border-radius: 50%;
+     transform: translateZ(-1px);
+     transition: all 0.5s ease-out;
+ }
+
+ html.light .iphone .trigger::after,
+ html.light .iphone .trigger {
+     background-color: #17172a;
+ }
+
+ html.dark .iphone .trigger::after,
+ html.dark .iphone .trigger {
+     background-color: var(--color-primary);
+ }
+
+ html .iphone .trigger:hover::after {
+     transform: translateZ(-1px) scale(1.5);
+ }
+
+ html .iphone .overlay {
+     width: 48px;
+     height: 48px;
+     border-radius: 50%;
+     background: white;
+     position: fixed;
+     left: 42px;
+     top: 58px;
+     transform: translate(-50%, -80%);
+     transition: all 1.7s ease-out;
+     z-index: -1;
+ }
+
+ html.light .iphone .overlay {
+     background: #def1ff;
+     color: var(--color-white);
+     line-height: var(--md-line-height);
+     /* background-image: url(../../assets/bg-texture.png); */
+ }
+
+ @media (max-width: 767.9px) {
+     html .circle {
+         width: 400px;
+         height: 400px;
+         top: -160px;
+     }
+ }
+
+ @media (max-width: 440px) {
+     html .circle {
+         display: none;
+     }
+ }
+
+ html.dark {
+     --color-html: #1f1f1f;
+     --border-inner: #1f1f1f;
+     --border-mid: #191919;
+     --border-outer: #111111;
+     --bottom-line: #1f1f1f;
+     --top-line: #1f1f1f;
+     --speaker: #101010;
+     --camera: #101010;
+     --shadow: #111111;
+     --text: #e4e4e4;
+ }
+
+
+ html.dark .moon svg path {
+     d: path("M38.5 80C38.5 124.183 80 163 80 160C35.8172 160 0 124.183 0 80C0 35.8172 35.8172 0 80 0C80 0 38.5 35.8172 38.5 80Z");
+ }
+
+ html.dark .trigger {
+     background-image: url(https://jssecrets.com/wp-content/uploads/2023/01/sun.svg);
+ }
+
+ html.light .overlay {
+     transform: translate(-50%, -80%) scale(20);
+
+     width: 100%;
+     height: 100%;
+
+ }
+
+ html.dark .circle {
+     background: linear-gradient(90deg, #8079f0 0%, #82abf2 100%);
+     box-shadow: 0px 8px 16px rgba(131, 173, 243, 0.25);
+ }
+
+ @keyframes toBlack {
+     0% {
+         background-color: #f5f5f5;
+     }
+
+     90% {
+         background-color: #f5f5f5;
+     }
+
+     100% {
+         background-color: #111111;
+     }
+ }
+
+ .jssecrets {
+     font-weight: 500;
+     text-decoration: none !important;
+     font-family: "Urbanist";
+     padding: 16px;
+     background: #ffc805;
+     color: #000000;
+     font-size: 1.2em;
+     letter-spacing: 0.2px;
+     border-radius: 8px;
+     box-shadow: 0px 4px 12px rgba(184, 144, 0, 0.1882352941), 0px 8px 24px rgba(184, 144, 0, 0.3764705882);
+     position: absolute;
+     bottom: 24px;
+     right: 24px;
+     transition: all 0.3s;
+ }
+
+ .jssecrets:hover {
+     transform: translateY(-4px);
+ }
