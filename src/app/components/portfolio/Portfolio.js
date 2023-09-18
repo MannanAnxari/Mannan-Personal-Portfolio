@@ -14,9 +14,14 @@ export const Portfolio = () => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
+ 
+    let auth = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN;
+
     const octokit = new Octokit({
-      auth: "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",
+      auth,
     });
+
+    console.log({auth});
 
     octokit
       .request("GET /user/repos", {
