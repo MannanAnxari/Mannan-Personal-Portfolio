@@ -19,9 +19,7 @@ export const Portfolio = () => {
 
     const octokit = new Octokit({
       auth,
-    });
-
-    console.log({auth});
+    }); 
 
     octokit
       .request("GET /user/repos", {
