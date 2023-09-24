@@ -3,6 +3,7 @@ import "./footer.css";
 import { FaFacebookF } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { IoLogoTwitter } from "react-icons/io";
+import { LoginButton } from "./../login/Button";
 
 export const Footer = () => {
   return (
@@ -31,6 +32,9 @@ export const Footer = () => {
         </li>
         <li>
           <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <LoginButton />
         </li>
       </ul>
       <div className="footerSocial">
