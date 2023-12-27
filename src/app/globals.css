@@ -2,11 +2,11 @@
 
 :root {
   /* Dark */
-  --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-second: #0597ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-bg: #16162c;
+  --color-bg-variant: #1f1f38;
+  --color-primary: #FF5438;
+  --color-primary-second: #ff5438;
+  --color-primary-variant: rgba(255, 84, 56, 0.4);
   --color-white: rgb(255, 255, 255);
   --color-light: rgba(255, 255, 255, 0.6);
   --container-width-lg: 75%;
@@ -16,14 +16,19 @@
   --transition: all 400ms ease;
 }
 
+html{
+  scroll-padding-top: 3rem;
+}
+
 html.light {
   --color-bg: #e1f3ff;
-  --color-primary: #17172a;
-  --color-primary-second: #4db5ff82;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
-  --color-white: #17172a;
-  --color-light: #17172a;
-  --color-bg-variant: #4db5ff82;
+  --color-primary: #ff5438;
+  --color-primary-second: #ff674f40;
+  --color-primary-variant: rgba(255, 83, 56, 0.257);
+  
+  --color-white: #ff5438;
+  --color-light: #ff5438;
+  --color-bg-variant: #ff674f40;
   --color-primary-second: #ededed;
 }
 
@@ -74,7 +79,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #1f1f38;
+  background: var(--color-bg);
   color: var(--color-white);
   line-height: var(--md-line-height);
   background-image: url(./assets/bg-texture.png);

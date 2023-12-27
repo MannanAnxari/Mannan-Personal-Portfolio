@@ -45,7 +45,7 @@ export default function Home() {
     <React.Fragment>
 
     <Cursor />
-    <Style mode={mode} setTheme={setTheme} dispatch={dispatch} />
+    {/* <Style mode={mode} setTheme={setTheme} dispatch={dispatch} /> */}
     <Header />
     <Nav />
     <About />

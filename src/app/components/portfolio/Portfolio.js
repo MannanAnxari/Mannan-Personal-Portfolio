@@ -19,8 +19,8 @@ export const Portfolio = () => {
 
     const octokit = new Octokit({
       auth,
-    }); 
-
+    });
+ 
     octokit
       .request("GET /user/repos", {
         // 100 Max
@@ -53,7 +53,7 @@ export const Portfolio = () => {
                               ? item.homepage
                               : item.homepage.split("https://")[1]
                           }`}
-                          alt={item.name ? item.name : "A-Mannan Repo"}
+                          alt={item.name || "A-Mannan Repo"}
                         />
                       </div>
                       <h3>

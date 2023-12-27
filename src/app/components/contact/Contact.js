@@ -60,7 +60,7 @@ export const Contact = () => {
             <RiMessengerLine className="contactOptionIco" />
             <h4>Messenger</h4>
             <h5>Mannan</h5>
-            <a className="view" href="mailto:mannananxari@gmail.com" target={"_blank"}>
+            <a className="view" href="//www.facebook.com/messages/t/100014396160448" target={"_blank"}>
               Send a message
             </a>
           </article>
@@ -68,7 +68,7 @@ export const Contact = () => {
             <BsWhatsapp className="contactOptionIco" />
             <h4>WhatsApp</h4>
             <h5>+92-313-123-2025</h5>
-            <a className="view" href="//wa.me/+923131232025" target={"_blank"}>
+            <a className="view" href="//wa.me/+923131232025?text=Hey!%0AMannan,%20WhasUppppp" target={"_blank"}>
               Send a message
             </a>
           </article>

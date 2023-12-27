@@ -148,8 +148,8 @@
      background-position: center center;
      background-repeat: no-repeat;
      position: fixed;
-     left: 42px;
-     top: 58px;
+     left: 4rem;
+     top: 4rem;
      transform: translate(-50%, -80%);
      z-index: 1;
      transform-style: preserve-3d;
@@ -168,7 +168,7 @@
 
  html.light .iphone .trigger::after,
  html.light .iphone .trigger {
-     background-color: #17172a;
+     background-color: var(--color-primary);
  }
 
  html.dark .iphone .trigger::after,
@@ -186,8 +186,8 @@
      border-radius: 50%;
      background: white;
      position: fixed;
-     left: 42px;
-     top: 58px;
+     left: 4rem;
+     top: 4rem;
      transform: translate(-50%, -80%);
      transition: all 1.7s ease-out;
      z-index: -1;

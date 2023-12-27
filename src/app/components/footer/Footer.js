@@ -38,13 +38,13 @@ export const Footer = () => {
         </li>
       </ul>
       <div className="footerSocial">
-        <a className="view" href="//facebook.com/" target={"_blank"}>
+        <a className="view" href="//www.facebook.com/profile.php?id=100014396160448" target={"_blank"}>
           <FaFacebookF />
         </a>
-        <a className="view" href="//instagram.com/" target={"_blank"}>
+        <a className="view" href="//instagram.com/themannananxari" target={"_blank"}>
           <FiInstagram />
         </a>
-        <a className="view" href="//twitter.com/" target={"_blank"}>
+        <a className="view" href="//twitter.com/mannananxari" target={"_blank"}>
           <IoLogoTwitter />
         </a>
       </div>
