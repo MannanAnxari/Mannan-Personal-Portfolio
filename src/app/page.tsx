@@ -1,28 +1,21 @@
-'use client'
-import { useSelector, useDispatch } from 'react-redux'
-import { setTheme } from "./slice/styleSlices"
-import React, { useEffect }  from 'react' 
-import { AppDispatch, RootState } from './store/store' 
+'use client';
+
+import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { RootState } from './store/store'
 import { Header } from "./components/header/Header";
 import { Nav } from "./components/nav/Nav";
 import { About } from "./components/about/About";
 import { Cursor } from "./components/cursor/Cursor";
-import ContextMenu from "./components/contextMenu/ContextMenu";
 import { Experience } from "./components/experience/Experience";
 import { Services } from "./components/services/Services";
 import { Portfolio } from "./components/portfolio/Portfolio";
-import { Testimonials } from "./components/testimonials/Testimonials";
 import { Contact } from "./components/contact/Contact";
 import { Footer } from "./components/footer/Footer";
 
-import { Style } from "./components/Modes/Style";
- 
-export default function Home() { 
- 
-  const {mode} = useSelector((state: RootState) => state.style);
-  const dispatch = useDispatch<AppDispatch>();
-   
-  
+export default function Home() {
+
+  const { mode } = useSelector((state: RootState) => state.style);
 
   useEffect(() => {
     if (mode === 'dark') {
@@ -40,25 +33,24 @@ export default function Home() {
   }, [mode])
 
 
-    
+
   return (
     <React.Fragment>
 
-    <Cursor />
-    {/* <Style mode={mode} setTheme={setTheme} dispatch={dispatch} /> */}
-    <Header />
-    <Nav />
-    <About />
-    {/* <ContextMenu /> */}
-    <Experience />
-    <Services />
-    <Portfolio />
-    {/* <Testimonials /> */}
-    <Contact />
-    <Footer />
-     
-     </React.Fragment>
-     
-    
+      <Cursor />
+      {/* <Style mode={mode} setTheme={setTheme} dispatch={dispatch} /> */}
+      <Header />
+      <Nav />
+      <About />
+      {/* <ContextMenu /> */}
+      <Experience />
+      <Services />
+      <Portfolio />
+      {/* <Testimonials /> */}
+      <Contact />
+      <Footer />
+
+    </React.Fragment> 
+
   )
 }
